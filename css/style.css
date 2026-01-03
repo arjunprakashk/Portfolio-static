@@ -545,3 +545,44 @@ footer {
         padding-right: 140px;
     }
 }
+
+
+
+
+
+
+
+.project-content {
+    padding: 20px;
+}
+
+.project-desc {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 12px 0;
+}
+
+.project-tech {
+    font-size: 13px;
+    color: #c9a46a;
+    margin-bottom: 15px;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-links a {
+    font-size: 13px;
+    padding: 8px 14px;
+    border: 1px solid #333;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.project-links a:hover {
+    background: #c9a46a;
+    color: #000;
+}
