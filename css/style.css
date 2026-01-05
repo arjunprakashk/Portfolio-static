@@ -138,6 +138,13 @@ a {
     line-height: 1.15;
     margin: 25px 0;
 }
+.hero h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 50px;
+    line-height: 1;
+    margin: 25px 0;
+    color: #9f9f9f;
+}
 
 .hero-image img {
     width: 100%;
@@ -586,8 +593,6 @@ footer {
     background: #c9a46a;
     color: #000;
 }
-
-
 #typing::after {
     content: "|";
     animation: blink 1s infinite;
