@@ -60,10 +60,11 @@
         <div class="hero-text">
             <span class="small">— HELLO WORLD</span>
             <h1>
-                Hey!<br>
-                I am Arjun,<br>
-                a full stack developer
+              Hey!<br>
+              I am Arjun,<br>
+              a <span id="typing"></span>
             </h1>
+
 
             <div class="socials">
                 <a href="https://github.com/arjunprakashk" target="_blank">GITHUB</a>
@@ -323,6 +324,45 @@
             body.classList.remove("menu-open");
         }
     });
+
+
+    const roles = [
+        "Full Stack Developer",
+        "Python Developer",
+        "Software Developer"
+    ];
+
+    const typingElement = document.getElementById("typing");
+
+    let roleIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function typeEffect() {
+        const currentRole = roles[roleIndex];
+
+        if (!isDeleting) {
+            typingElement.textContent = currentRole.substring(0, charIndex + 1);
+            charIndex++;
+
+            if (charIndex === currentRole.length) {
+                setTimeout(() => isDeleting = true, 1500);
+            }
+        } else {
+            typingElement.textContent = currentRole.substring(0, charIndex - 1);
+            charIndex--;
+
+            if (charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+            }
+        }
+
+        setTimeout(typeEffect, isDeleting ? 70 : 120);
+    }
+
+    typeEffect();
+
 </script>
 
 
